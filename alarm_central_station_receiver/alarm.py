@@ -157,9 +157,9 @@ class Alarm(object):
         keyswitch'. Toggling this I/O port triggers the alarm
         to arm and disarm.
         """
-        GPIO.output(15, not GPIO.input(15))
+        #GPIO.output(15, not GPIO.input(15))
         time.sleep(2)
-        GPIO.output(15, not GPIO.input(15))
+        #GPIO.output(15, not GPIO.input(15))
 
     def _initialize_rpi_gpio(self):
         """
@@ -168,6 +168,7 @@ class Alarm(object):
         keyswitch'. Toggling this I/O port triggers the alarm
         to arm and disarm.
         """
-        GPIO.setwarnings(False)
-        GPIO.setmode(GPIO.BOARD)
-        GPIO.setup(15, GPIO.OUT)
+        return None
+        #GPIO.setwarnings(False)
+        #GPIO.setmode(GPIO.BOARD)
+        #GPIO.setup(15, GPIO.OUT)
